@@ -1,6 +1,9 @@
+
+import { LogoutBtn } from "@/components/ClientComponents";
+import Link from "next/link";
 import React from "react";
 
-const header = () => {
+const Header = () => {
   return (
     <div className="header">
       <div>
@@ -9,10 +12,10 @@ const header = () => {
       <article>
         <Link href={"/"}>Home</Link>
         <Link href={"/about"}>About</Link>
-        <Link href={"/"}></Link>
+        <LogoutBtn />
       </article>
     </div>
   );
 };
 
-export default header;
+export default Header;
