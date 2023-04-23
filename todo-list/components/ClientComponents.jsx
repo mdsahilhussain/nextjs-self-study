@@ -1,5 +1,5 @@
 "use client";
-
+import React from "react";
 import Link from "next/link";
 import { createContext, useContext, useState } from "react";
 
@@ -25,5 +25,19 @@ export const LogoutBtn = () => {
     </button>
   ) : (
     <Link href={"/login"}>Login</Link>
+  );
+};
+
+export const TodoBtn = ({ id, completed }) => {
+  const deleteHandler = (id) => {
+    alert(`Deleting, ${id}`);
+  };
+  return (
+    <React.Fragment>
+      <input type="checkbox" checked={completed} />
+      <button className="btn" onClick={deleteHandler}>
+        Delete
+      </button>
+    </React.Fragment>
   );
 };
