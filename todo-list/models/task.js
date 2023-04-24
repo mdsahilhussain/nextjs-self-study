@@ -4,7 +4,6 @@ const schema = new mongoose.Schema({
   title: {
     type: String,
     required: true,
-    maxLength: [20, "Title too long"],
   },
   description: {
     type: String,
@@ -14,14 +13,14 @@ const schema = new mongoose.Schema({
     type: Boolean,
     default: false,
   },
-  user: {
-    type: mongoose.Schema.Types.ObjectId,
-    required: true,
-    ref: "User",
-  },
+  // user: {
+  //   type: mongoose.Schema.Types.ObjectId,
+  //   required: true,
+  //   ref: "User",
+  // },
   createdAt: {
-    type: Data,
-    default: Data.now,
+    type: Date,
+    default: Date.now,
   },
 });
 mongoose.models = {};
